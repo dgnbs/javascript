@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            text-transform: uppercase;
+            background: linear-gradient(to top left, #ac90d0,  #7f54b3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            }
+        
+        input {
+            background-color: #fff;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        input:focus {
+            outline: 3px solid rgba(0, 0, 0, 0.75);
+        }
+    </style>
+
+    <script>
+        function addition(){
+
+            if(txt1.value==""){
+                alert("First number is missing")
+                txt1.focus()
+            } 
+            else {
+                if (txt2.value==""){
+                alert("Second number is missing")
+                text2.focus() 
+                } else {
+                    let a=txt1.value;
+                    let b=txt2.value;
+                    let c=parseInt(a)+parseInt(b);
+                    txt3.value=c;
+                }
+            }
+        }
+    </script>
+
+    First Number:<input id="txt1" type="text" >
+    <br />
+    Second Number:<input id="txt2" type="text" >
+    <br />
+    <input 
+        id="btn"
+        type="button"
+        value="+"
+        onClick="addition()">
+    <br />
+    Result:<input id="txt3" type="text">
+    
+</body>
+</html>
